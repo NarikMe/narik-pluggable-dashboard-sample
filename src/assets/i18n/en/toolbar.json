@@ -1,0 +1,9 @@
+{
+  "new_command_tooltip": "New",
+  "edit_command_tooltip": "Edit",
+  "save_command_tooltip": "Save",
+  "delete_command_tooltip": "Delete",
+  "close_command_tooltip": "Close",
+  "refresh_command_tooltip": "Refresh",
+  "list_command_tooltip":"List"
+}

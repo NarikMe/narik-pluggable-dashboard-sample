@@ -1,0 +1,20 @@
+:host {
+  width: 100%;
+}
+
+.row-container {
+  position: relative;
+  min-height: 100px;
+}
+
+
+
+.row-content {
+  min-height: 100px;
+  margin-top: 20px;
+}
+
+.row-menu {
+  cursor: pointer;
+  margin-top: 5px;
+}

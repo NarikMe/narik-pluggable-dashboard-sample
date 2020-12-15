@@ -1,0 +1,22 @@
+<div class="designer-root">
+  <h6>
+    <ng-container narik-section="title">widget Title</ng-container>
+  </h6>
+  <narik-input
+    *ngIf="displayTitle"
+    label='{{"dashboard.title" | translate}}'
+    [(ngModel)]="model.title"
+    name="title"
+    required
+  >
+  </narik-input>
+
+  <div narik-section="content"></div>
+
+  <narik-checkbox
+    label='{{"isActive" | translate}}'
+    [(ngModel)]="model.isActive"
+    name="isActive"
+  >
+  </narik-checkbox>
+</div>

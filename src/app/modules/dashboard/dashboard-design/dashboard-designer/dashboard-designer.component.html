@@ -1,0 +1,11 @@
+<narik-busy-indicator>
+  <narik-toolbar [host]="this" toolbarKey="dashboard-designer"></narik-toolbar>
+  <div class="container-fluid row-list dashboard-body" cdkDropList (cdkDropListDropped)="drop($event)">
+    <div *ngFor="let row of rows" class="row row-item" cdkDrag [ngClass]="{'selected': row===selectedRow}">
+      <dashboard-row (dblclick)="selectedRow=undefined;" (click)="selectedRow=row"
+        [ngClass]="{'selected': selectedRow===row}" (removeRequest)="removeRow($event)" [row]="row">
+      </dashboard-row>
+    </div>
+  </div>
+</narik-busy-indicator>
+<input #importFile style="display: none" id="file-upload" type="file" (change)="import($event)" />

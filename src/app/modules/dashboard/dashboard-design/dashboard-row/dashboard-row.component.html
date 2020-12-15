@@ -1,0 +1,12 @@
+<div class="m-1 p-1 row-container">
+  <div class="row row-content">
+    <dashboard-cell *ngFor="let cell of row.cells" (removeRequest)="removeCell($event)" [cell]="cell"
+      [size]="cell.size"></dashboard-cell>
+  </div>
+  <div class="row-toolbar"  (mouseenter)="isMouseOver=true;" (mouseleave)="isMouseOver=false;">
+    <mat-icon class="row-menu">more_horiz</mat-icon>
+    <narik-toolbar [host]="this" itemsStyle="mat-mini-fab" *ngIf="isMouseOver" toolbarKey="dashboard-row">
+    </narik-toolbar>
+  </div>
+
+</div>

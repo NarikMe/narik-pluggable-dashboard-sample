@@ -1,0 +1,32 @@
+<!-- #layout:'WidgetViewUi' -->
+<ng-template #title>
+  {{ model.title }}
+</ng-template>
+
+<ng-template #content>
+  <div class="mt-1">
+    <ng-container *ngIf="model && model.links">
+      <mat-list role="list">
+        <ng-container *ngFor="let item of model.links">
+          <mat-list-item role="listitem">
+            <a
+              *ngIf="item.link && !item.link.startsWith('http://')"
+              routerLink="{{ item.link }}"
+            >
+              <i class="fa fa-bars"></i>
+              {{ item.linkTitle }}
+            </a>
+            <a
+              target="_blank"
+              *ngIf="item.link && item.link.startsWith('http://')"
+              href="{{ item.link }}"
+            >
+              <i class="fa fa-bars"></i>
+              {{ item.linkTitle }}
+            </a>
+          </mat-list-item>
+        </ng-container>
+      </mat-list>
+    </ng-container>
+  </div>
+</ng-template>

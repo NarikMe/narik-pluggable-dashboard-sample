@@ -1,0 +1,153 @@
+{
+  "widgetTypeGroups": [
+    {
+      "key": "general",
+      "value": "General",
+      "widgetTypes": [
+        {
+          "key": "link",
+          "value": "Link",
+          "defaultModel": {
+            "links": []
+          },
+          "remote": {
+            "mode": "production",
+            "entry": {
+              "development": "http://localhost:4202/remoteEntry.js",
+              "production": "assets/plugins/link/remoteEntry.js"
+            },
+            "viewer": {
+              "module": "./Viewer",
+              "component": "LinkViewComponent"
+            },
+            "designer": {
+              "module": "./Designer",
+              "component": "LinkDesignComponent"
+            }
+          }
+        },
+        {
+          "key": "chart",
+          "value": "Chart",
+          "defaultModel": {
+            "chartType": "bar-vertical",
+            "schemeType": "ordinal",
+            "colorScheme": "cool",
+            "animations": true,
+            "showXAxis": true,
+            "showYAxis": true,
+            "showGridLines": true,
+            "rotateXAxisTicks": true,
+            "noBarWhenZero": true,
+            "roundEdges": true,
+            "showXAxisLabel": true,
+            "showYAxisLabel": true,
+            "barPadding": 5,
+            "legendPosition": "right"
+          },
+          "remote": {
+            "mode": "production",
+            "entry": {
+              "development": "http://localhost:4204/remoteEntry.js",
+              "production": "assets/plugins/chart/remoteEntry.js"
+            },
+            "viewer": {
+              "module": "./Viewer",
+              "componentModule": "ViewModule",
+              "component": "ChartViewComponent"
+            },
+            "designer": {
+              "module": "./Designer",
+
+              "component": "ChartDesignComponent"
+            }
+          }
+        },
+        {
+          "key": "todo",
+          "value": "Todo",
+          "defaultModel": {
+            "items": []
+          },
+          "remote": {
+            "mode": "production",
+            "entry": {
+              "development": "http://localhost:4201/remoteEntry.js",
+              "production": "assets/plugins/todo/remoteEntry.js"
+            },
+            "viewer": {
+              "module": "./Viewer",
+              "component": "TodoViewComponent"
+            },
+            "designer": {
+              "module": "./Designer",
+              "component": "TodoDesignComponent"
+            }
+          }
+        },
+        {
+          "key": "dateTime",
+          "value": "DateTime",
+          "defaultModel": {
+            "format": "MM/dd/yyyy HH:mm:ss"
+          },
+          "remote": {
+            "mode": "production",
+            "entry": {
+              "development": "http://localhost:4204/remoteEntry.js",
+              "production": "assets/plugins/dateTime/remoteEntry.js"
+            },
+            "viewer": {
+              "module": "./Viewer",
+              "component": "DateTimeViewComponent"
+            },
+            "designer": {
+              "module": "./Designer",
+              "component": "DateTimeDesignComponent"
+            }
+          }
+        },
+        {
+          "key": "kpi",
+          "value": "Kpi",
+          "defaultModel": {},
+          "remote": {
+            "mode": "production",
+            "entry": {
+              "development": "http://localhost:4203/remoteEntry.js",
+              "production": "assets/plugins/kpi/remoteEntry.js"
+            },
+            "viewer": {
+              "module": "./Viewer",
+              "component": "KpiViewComponent"
+            },
+            "designer": {
+              "module": "./Designer",
+              "component": "KpiDesignComponent"
+            }
+          }
+        },
+        {
+          "key": "dataTable",
+          "value": "DataTable",
+          "defaultModel": {},
+          "remote": {
+            "mode": "production",
+            "entry": {
+              "development": "http://localhost:4205/remoteEntry.js",
+              "production": "assets/plugins/dataTable/remoteEntry.js"
+            },
+            "viewer": {
+              "module": "./Viewer",
+              "component": "DataTableViewComponent"
+            },
+            "designer": {
+              "module": "./Designer",
+              "component": "DataTableDesignComponent"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

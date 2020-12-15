@@ -1,0 +1,64 @@
+.widget-view-container {
+  position: relative;
+}
+
+.widget-full-screen .widget-content {
+  padding: 20px !important;
+}
+
+.widget-title-container {
+  height: 30px;
+}
+
+.advanced-pie-legend
+  .legend-items-container
+  .legend-items
+  .legend-item
+  .item-label {
+  margin-top: 0 !important;
+}
+
+.advanced-pie-legend
+  .legend-items-container
+  .legend-items
+  .legend-item
+  .item-value {
+  margin-top: 0 !important;
+}
+
+.advanced-pie-legend .total-label {
+  margin-top: 10px;
+}
+
+.mat-table-container {
+  height: 100% !important;
+}
+
+narik-mat-busy-indicator {
+  height: calc(100% - 70px);
+}
+
+.has-paging narik-mat-busy-indicator {
+  height: calc(100% - 100px);
+}
+
+.widget-view-toolbar {
+  position: absolute;
+  right: -10px;
+  top: -20px;
+}
+
+.widget-full-screen .widget-view-toolbar {
+  right: 0 !important;
+  top: 0 !important;
+}
+
+[dir="rtl"] .widget-view-toolbar {
+  right: initial !important;
+  left: -10px !important;
+}
+
+[dir="rtl"] .widget-full-screen .widget-view-toolbar {
+  right: initial !important;
+  left: 0 !important;
+}

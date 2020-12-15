@@ -1,0 +1,232 @@
+{
+  "imports": {
+    "$$dataInfo": "./base/data-info.json",
+    "$$toolbar": "./base/tool-bars.json",
+    "$$uiDefaults": "./base/ui-default-options.json"
+  },
+  "metaData": {
+    "translateItems": ["main", "toolbar", "material", "dashboard"],
+    "dataInfo": "$$dataInfo.dataInfo",
+    "dataItems": [
+      {
+        "key": "widgetTypes",
+        "dataProviderKey": "remote",
+        "dataUrl": "assets/dashboard.json"
+      },
+      {
+        "key": "widgetData",
+        "dataProviderKey": "localStorage",
+        "dataUrl": "assets/dashboard-data.json"
+      }
+    ],
+    "uiDefaultOptions": [
+      "$$uiDefaults.select",
+      "$$uiDefaults.data-table",
+      "$$uiDefaults.data-table-select",
+      "$$uiDefaults.button",
+      "$$uiDefaults.toolbar"
+    ],
+    "entities": [
+      {
+        "key": "branch",
+        "fields": [
+          {
+            "name": "address",
+            "required": false,
+            "fieldType": "text",
+            "showInList": false
+          },
+          {
+            "name": "city",
+            "required": false,
+            "fieldType": "text",
+            "order": 3
+          },
+          {
+            "name": "name",
+            "required": true,
+            "fieldType": "text",
+            "order": 1
+          },
+          {
+            "name": "state",
+            "required": false,
+            "fieldType": "text",
+            "order": 2
+          },
+          {
+            "name": "zipCode",
+            "required": false,
+            "fieldType": "text",
+            "order": 4
+          }
+        ],
+        "defaultEntity": {}
+      }
+    ],
+    "views": [
+      {
+        "key": "branch",
+        "viewType": "Edit",
+        "entity": "branch"
+      },
+      {
+        "key": "branch-list",
+        "viewType": "List",
+        "entity": "branch"
+      }
+    ],
+
+    "menuItems": [
+      {
+        "title": "dashboard.dashboard",
+        "icon": "home-outline",
+        "link": "/"
+      },
+      {
+        "title": "dashboard.dashboardForm",
+        "icon": "menu-outline",
+        "children": [
+          {
+            "title": "dashboard.dashboard",
+            "link": "/dashboard"
+          },
+          {
+            "title": "dashboard.dashboardDesign",
+            "link": "/dashboard-design"
+          }
+        ]
+      },
+      {
+        "title": "branch",
+        "icon": "menu-outline",
+        "children": [
+          {
+            "title": "branch_new",
+            "link": "/branch"
+          },
+          {
+            "title": "list_branch",
+            "link": "/branch-list"
+          }
+        ]
+      }
+    ],
+    "toolbars": [
+      "$$toolbar.editToolBar",
+      "$$toolbar.listToolBar",
+      {
+        "key": "dashboard-designer",
+        "items": [
+          {
+            "key": "add",
+            "icon": "add",
+            "tooltip": "dashboard.add_row"
+          },
+          {
+            "key": "add",
+            "icon": "add",
+            "tooltip": "dashboard.add_row_2",
+            "data": 2
+          },
+          {
+            "key": "add",
+            "icon": "add",
+            "tooltip": "dashboard.add_row_3",
+            "data": 3
+          },
+          {
+            "key": "add",
+            "icon": "add",
+            "tooltip": "dashboard.add_row_4",
+            "data": 4
+          },
+          {
+            "key": "import",
+            "icon": "cloud_upload",
+            "tooltip": "dashboard.import_cell"
+          },
+          {
+            "key": "export",
+            "icon": "cloud_download",
+            "tooltip": "dashboard.export_cell"
+          },
+          "-",
+          {
+            "key": "importSample",
+            "icon": "cloud_upload",
+            "tooltip": "dashboard.import_sample"
+          }
+        ]
+      },
+      {
+        "key": "dashboard-viewer",
+        "items": [
+          {
+            "key": "import",
+            "icon": "cloud_upload",
+            "tooltip": "dashboard.import_cell"
+          }
+        ]
+      },
+      {
+        "key": "dashboard-row",
+        "items": [
+          {
+            "key": "add",
+            "icon": "add",
+            "tooltip": "dashboard.add_cell"
+          },
+          {
+            "key": "remove",
+            "icon": "delete",
+            "tooltip": "dashboard.remove_row"
+          }
+        ]
+      },
+      {
+        "key": "dashboard-cell",
+        "items": [
+          {
+            "key": "plus",
+            "icon": "exposure_plus_1",
+            "tooltip": "dashboard.increase_cell"
+          },
+          {
+            "key": "minus",
+            "icon": "exposure_neg_1",
+            "tooltip": "dashboard.decrease_cell"
+          },
+          "-",
+          {
+            "key": "remove",
+            "icon": "delete",
+            "tooltip": "dashboard.remove_cell"
+          },
+          {
+            "key": "clear",
+            "icon": "clear",
+            "tooltip": "dashboard.clear_cell"
+          },
+          "-",
+          {
+            "key": "build",
+            "icon": "build",
+            "tooltip": "dashboard.config"
+          },
+          "-",
+          {
+            "key": "import",
+            "icon": "cloud_upload",
+            "tooltip": "dashboard.import_cell"
+          },
+          {
+            "key": "export",
+            "icon": "cloud_download",
+            "tooltip": "dashboard.export_cell"
+          }
+        ]
+      }
+    ]
+  }
+}

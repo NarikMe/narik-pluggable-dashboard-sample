@@ -1,0 +1,28 @@
+<!-- #layout:'WidgetViewUi' -->
+<ng-template #title>
+  {{ model.title }}
+</ng-template>
+
+<ng-template #content>
+  <div class="mt-1">
+    <ng-container *ngIf="todoItems.length">
+      <mat-list role="list">
+        <ng-container *ngFor="let item of todoItems">
+          <mat-list-item role="listitem">
+            <narik-checkbox
+              [ngClass]="{ done: item.done }"
+              [label]="item.title"
+              (Change)="setDone(item, $event)"
+              name="done"
+            >
+            </narik-checkbox>
+          </mat-list-item>
+        </ng-container>
+        <div class="footer">{{ remainCount }} items left.</div>
+      </mat-list>
+    </ng-container>
+    <ng-container *ngIf="!todoItems.length">
+      There is no todo item!
+    </ng-container>
+  </div>
+</ng-template>

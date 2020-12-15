@@ -1,0 +1,54 @@
+<!-- #layout:'WidgetDesignUi' -->
+<ng-template #title>
+  {{ 'dashboard.titles.link' | translate }}
+</ng-template>
+
+<ng-template #content>
+  <mat-card>
+    <narik-input
+      label="{{ 'linkTitle' | translate }}"
+      [(ngModel)]="currentLink.linkTitle"
+      name="linkTitle"
+      required
+    >
+    </narik-input>
+    <narik-input
+      label="{{ 'link' | translate }}"
+      [(ngModel)]="currentLink.link"
+      name="link"
+      required
+    >
+    </narik-input>
+
+    <narik-button
+      buttonClass="btn-outline-primary"
+      icon="add"
+      (nClick)="add()"
+      label="{{ 'add' | translate }}"
+    >
+    </narik-button>
+  </mat-card>
+
+  <mat-card class="mt-1">
+    <mat-list role="list">
+      <ng-container *ngFor="let item of model.links">
+        <mat-list-item role="listitem">
+          <mat-icon
+            color="accent"
+            class="cursor-pointer"
+            (click)="removeLink(item)"
+            matListIcon
+            >clear</mat-icon
+          >
+          <mat-icon
+            class="cursor-pointer"
+            (click)="this.currentLink = item"
+            matListIcon
+            >center_focus_weak</mat-icon
+          >
+          {{ item.linkTitle }}
+        </mat-list-item>
+      </ng-container>
+    </mat-list>
+  </mat-card>
+</ng-template>

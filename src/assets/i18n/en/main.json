@@ -1,0 +1,14 @@
+{
+  "branch": "Branch",
+  "address": "Address",
+  "city": "City",
+  "name": "Name",
+  "state": "State",
+  "zipCode": "ZipCode",
+  "isActive": "Is Active",
+  "linkTitle": "Link Title",
+  "link": "Link",
+  "add": "Add",
+  "list": "List",
+  "new":"New"
+}

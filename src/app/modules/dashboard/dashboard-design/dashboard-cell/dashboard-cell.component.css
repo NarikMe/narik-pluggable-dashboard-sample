@@ -1,0 +1,25 @@
+.cell-container {
+  position: relative;
+  min-height: 100px;
+}
+
+
+.config-container {
+  display: flex;
+  height: 60px;
+}
+
+.config-button {
+  margin: auto;
+}
+
+.cell-menu {
+  cursor: pointer;
+  margin-top: auto;
+
+}
+
+.cell-toolbar:hover {
+  opacity: 1;
+}
+

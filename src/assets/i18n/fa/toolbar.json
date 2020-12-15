@@ -1,0 +1,9 @@
+{
+  "new_command_tooltip": "جدید",
+  "edit_command_tooltip": "ویرایش",
+  "save_command_tooltip": "ذخیره",
+  "delete_command_tooltip": "حذف",
+  "close_command_tooltip": "بستن",
+  "refresh_command_tooltip": "بروز رسانی",
+  "list_command_tooltip": "لیست"
+}

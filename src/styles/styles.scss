@@ -1,0 +1,136 @@
+@import '~@nebular/theme/styles/prebuilt/default.css';
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import './dashboard-designer';
+@import './dashboard-viewer';
+
+#toast-container > div {
+  opacity: 1;
+}
+
+[dir='rtl'] .layout-container nb-sidebar.left {
+  order: initial !important;
+}
+
+nb-layout-header.fixed {
+  z-index: 1000 !important;
+}
+
+.mat-form-field-label {
+  height: 30px;
+}
+
+.mat-form-field-infix {
+  width: initial !important;
+}
+
+narik-button {
+  cursor: pointer;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+a:hover {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+narik-checkbox {
+  display: block;
+}
+
+.widget-full-screen {
+  height: 100vh;
+  background-color: #fff;
+}
+
+[dir='rtl'] .toolbar-btn {
+  margin-right: 0.2rem !important;
+  margin-left: initial !important;
+}
+
+[dir='rtl'] .toolbar-btn:first-child {
+  margin-right: 0 !important;
+  margin-left: initial !important;
+}
+
+[dir='rtl'] .mat-toolbar > .mat-divider-vertical {
+  margin-right: 8px !important;
+  margin-left: 4px !important;
+}
+
+[dir='rtl'] .narik-mat-table-select-arrow-wrapper {
+  right: initial;
+  left: 0;
+}
+
+[dir='rtl'] .nb-theme-default nb-layout .layout {
+  font-family: Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+[dir='rtl'] .nb-theme-default nb-layout-header {
+  font-family: Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+[dir='rtl'] .nb-theme-default nb-sidebar {
+  font-family: Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+[dir='rtl'] .nb-theme-default nb-card {
+  font-family: Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+[dir='rtl'] .nb-theme-default nb-card-header {
+  font-family: Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+[dir='rtl'] .mat-card {
+  font-family: Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+[dir='rtl'] .mat-form-field {
+  font-family: Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+[dir='rtl'] .mat-table {
+  font-family: Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+[dir='rtl'] .mat-tooltip {
+  font-family: Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+[dir='rtl'] .nb-theme-default h5,
+.nb-theme-default .h5,
+.nb-theme-default h4,
+.nb-theme-default .h4 {
+  font-family: Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+[dir='rtl'] .mat-checkbox {
+  font-family: Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+[dir='rtl'] .nb-theme-default li {
+  font-family: Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+[dir='rtl'] .nb-theme-default nb-menu .menu-group,
+.nb-theme-default nb-menu .menu-item a {
+  font-family: Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+[dir='rtl'] .mat-button,
+.mat-raised-button,
+.mat-icon-button,
+.mat-stroked-button,
+.mat-flat-button,
+.mat-fab,
+.mat-mini-fab {
+  font-family: Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+.designer-root {
+  min-width: 300px;
+}

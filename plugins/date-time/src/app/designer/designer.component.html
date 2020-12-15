@@ -1,0 +1,23 @@
+<!-- #layout:'WidgetDesignUi' -->
+<ng-template #title>
+  {{ 'dashboard.titles.datetime' | translate }}
+</ng-template>
+
+<ng-template #content>
+  <a
+    class="cursor-pointer"
+    target="_blank"
+    title="help"
+    href="https://date-fns.org/v2.12.0/docs/format"
+  >
+    <mat-icon>help</mat-icon>
+  </a>
+
+  <narik-input
+    label="{{ 'dashboard.format' | translate }}"
+    [(ngModel)]="model.format"
+    name="format"
+    required
+  >
+  </narik-input>
+</ng-template>

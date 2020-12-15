@@ -1,0 +1,20 @@
+<div class="header-container">
+  <div class="logo-container">
+    <a (click)="toggleSidebar()" href="#" class="sidebar-toggle">
+      <nb-icon icon="menu-2-outline"></nb-icon>
+    </a>
+    <a class="logo" [routerLink]="['/']">{{headerTitle}}</a>
+  </div>
+
+</div>
+
+
+<div class="header-container">
+  <mat-slide-toggle class="mx-4" [(ngModel)]="fa">FA/EN</mat-slide-toggle>
+  <nb-actions size="small">
+    <nb-action>
+      <nb-user nbContextMenuTag="user-context-menu" [nbContextMenu]="userMenu" [name]="user?.title"
+        [picture]="'assets/images/user-avatar.png'"></nb-user>
+    </nb-action>
+  </nb-actions>
+</div>

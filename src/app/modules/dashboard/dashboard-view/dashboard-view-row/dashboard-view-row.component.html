@@ -1,0 +1,6 @@
+<div class="m-1 p-1 row-container">
+  <div class="row row-content">
+    <dashboard-view-cell *ngFor="let cell of row.cells" [cell]="cell" [size]="cell.size">
+    </dashboard-view-cell>
+  </div>
+</div>

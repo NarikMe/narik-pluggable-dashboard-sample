@@ -1,0 +1,12 @@
+<!-- #layout:'WidgetViewUi' -->
+<ng-template #title>
+  {{ model.title }}
+</ng-template>
+
+<ng-template #content>
+  <div class="date-container">
+    <p class="center-item datetime-content">
+      {{ today | dfnsFormat: model.format || 'dddd Do MMM yyyy HH:mm:ss' }}
+    </p>
+  </div>
+</ng-template>

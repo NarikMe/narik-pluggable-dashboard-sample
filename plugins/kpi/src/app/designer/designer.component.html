@@ -1,0 +1,16 @@
+<!-- #layout:'WidgetDesignUi' -->
+<ng-template #title>
+  {{ 'dashboard.titles.kpi' | translate }}
+</ng-template>
+
+<ng-template #content>
+  <narik-select
+    [options]="selectOptions"
+    [dataSource]="dataSources"
+    label="{{ 'dashboard.dataSource' | translate }}"
+    [(ngModel)]="model.dataSource"
+    name="dataSource"
+    [required]="true"
+  >
+  </narik-select>
+</ng-template>

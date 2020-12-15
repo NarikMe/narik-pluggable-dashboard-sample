@@ -1,0 +1,9 @@
+{
+  "ITEMS_PER_PAGE_LABEL": "رکورد در هر صفحه:",
+  "NEXT_PAGE_LABEL": "صفحه بعد",
+  "PREVIOUS_PAGE_LABEL": "صفحه قبل",
+  "FIRST_PAGE_LABEL": "صفحه اول",
+  "LAST_PAGE_LABEL": "صفحه آخر",
+  "RANGE_PAGE_LABEL_1": "0 از  {{length}}",
+  "RANGE_PAGE_LABEL_2": "{{startIndex}} - {{endIndex}} از {{length}}"
+}

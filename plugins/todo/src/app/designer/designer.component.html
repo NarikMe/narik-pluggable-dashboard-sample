@@ -1,0 +1,10 @@
+<!-- #layout:'WidgetDesignUi' -->
+<ng-template #title>
+  {{"dashboard.titles.todo" | translate}}
+</ng-template>
+
+<ng-template #content>
+  <narik-select [options]="selectOptions" [dataSource]='dataSources' label='{{"dashboard.dataSource" | translate}}'
+    [(ngModel)]='model.dataSource' name='dataSource' [required]="true">
+  </narik-select>
+</ng-template>

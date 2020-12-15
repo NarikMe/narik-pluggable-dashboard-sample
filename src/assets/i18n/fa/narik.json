@@ -1,0 +1,26 @@
+{
+  "errors": {
+    "invalid_form": "Please Fill Form",
+    "required": "{0} Is Required",
+    "STATUS_401": "Its Not Accessable By Your Role",
+    "password_mismatch": "Your password dont mismatch",
+    "invalid_password": "Invalid password"
+  },
+  "info": {
+    "submit-succeed": "اطاعات با موفقیت ذخیره شد",
+    "delete-confirm": "آیا مطمئن به انجام عملیات حذف می باشید?",
+    "confirm": "تاییدیه"
+  },
+  "INVALID_LOGIN": "Invalid username or password",
+  "dialog-buttons": {
+    "ok": "تایید",
+    "cancel": "انصراف",
+    "yes": "بله",
+    "no": "خیر"
+  },
+  "clear": "پاک کردن",
+  "refresh": "بروز رسانی",
+  "table": {
+    "actions": "عملیات"
+  }
+}

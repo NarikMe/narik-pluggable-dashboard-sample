@@ -1,0 +1,10 @@
+{
+  "appplication-title": "ناریک",
+  "search": "جستجو",
+  "management": "مدیریت",
+  "menu": "منو",
+  "login": {
+    "change_Pass": "تغییر کلمه عبور",
+    "logout": "خروج"
+  }
+}

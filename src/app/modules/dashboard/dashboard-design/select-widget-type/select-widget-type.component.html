@@ -1,0 +1,8 @@
+<narik-select [options]="selectOptions" displayField="value" valueField="key" [dataSource]='widgetTypeGroups'
+label='{{"dashboard.widgetTypeGroup" | translate}}' [(ngModel)]='widgetTypeGroup'
+  name='widgetTypeGroup'>
+</narik-select>
+<narik-select [options]="selectOptions" displayField="value" valueField="key" [dataSource]='widgetTypes'
+label='{{"dashboard.widgetType" | translate}}' [(ngModel)]='widgetType'
+  name='widgetType'>
+</narik-select>

@@ -1,0 +1,495 @@
+<!-- #layout:'WidgetDesignUi' -->
+<ng-template #title>
+  {{ 'dashboard.titles.chart' | translate }}
+</ng-template>
+
+<ng-template #content>
+  <mat-tab-group style="min-width: 500px">
+    <mat-tab label="General">
+      <div class="p-2 flex-container">
+        <narik-select
+          [options]="selectOptions"
+          [dataSource]="dataSources"
+          label="{{ 'dashboard.dataSource' | translate }}"
+          [(ngModel)]="model.dataSource"
+          name="dataSource"
+          [required]="true"
+        >
+        </narik-select>
+
+        <narik-select
+          [dataSource]="charts"
+          label="{{ 'Chart Type' | translate }}"
+          [(ngModel)]="model.chartType"
+          name="chartType"
+          [required]="true"
+          [valueField]="'selector'"
+          [displayField]="'name'"
+          (ngModelChange)="selectChart($event)"
+        >
+        </narik-select>
+
+        <narik-select
+          [options]="selectOptions"
+          [dataSource]="themes"
+          label="{{ 'dashboard.theme' | translate }}"
+          [(ngModel)]="model.theme"
+          name="theme"
+          [required]="true"
+        >
+        </narik-select>
+
+        <narik-select
+          [options]="selectOptions"
+          [dataSource]="colorSchemes"
+          [required]="true"
+          label="{{ 'dashboard.colorScheme' | translate }}"
+          [(ngModel)]="model.colorScheme"
+          name="colorScheme"
+        >
+        </narik-select>
+
+        <narik-select
+          [options]="selectOptions"
+          [dataSource]="schemeTypes"
+          [required]="true"
+          label="{{ 'dashboard.schemeType' | translate }}"
+          [(ngModel)]="model.schemeType"
+          name="schemeType"
+        >
+        </narik-select>
+      </div>
+    </mat-tab>
+    <mat-tab label="Options">
+      <div class="p-2 flex-container">
+        <narik-checkbox
+          *ngIf="chart.options.includes('animations')"
+          label="{{ 'dashboard.animations' | translate }}"
+          [(ngModel)]="model.animations"
+          name="animations"
+        >
+        </narik-checkbox>
+        <narik-checkbox
+          *ngIf="chart.options.includes('showXAxis')"
+          label="{{ 'dashboard.showXAxis' | translate }}"
+          [(ngModel)]="model.showXAxis"
+          name="showXAxis"
+        >
+        </narik-checkbox>
+        <narik-checkbox
+          *ngIf="chart.options.includes('showRefLabels')"
+          label="{{ 'dashboard.showRefLabels' | translate }}"
+          [(ngModel)]="model.showRefLabels"
+          name="showRefLabels"
+        >
+        </narik-checkbox>
+        <narik-checkbox
+          *ngIf="chart.options.includes('showRefLines')"
+          label="{{ 'dashboard.showRefLines' | translate }}"
+          [(ngModel)]="model.showRefLines"
+          name="showRefLines"
+        >
+        </narik-checkbox>
+        <narik-checkbox
+          *ngIf="chart.options.includes('showYAxis')"
+          label="{{ 'dashboard.showYAxis' | translate }}"
+          [(ngModel)]="model.showYAxis"
+          name="showYAxis"
+        >
+        </narik-checkbox>
+        <narik-checkbox
+          *ngIf="chart.options.includes('showGridLines')"
+          label="{{ 'dashboard.showGridLines' | translate }}"
+          [(ngModel)]="model.showGridLines"
+          name="showGridLines"
+        >
+        </narik-checkbox>
+        <narik-checkbox
+          *ngIf="chart.options.includes('roundDomains')"
+          label="{{ 'dashboard.roundDomains' | translate }}"
+          [(ngModel)]="model.roundDomains"
+          name="roundDomains"
+        >
+        </narik-checkbox>
+        <narik-checkbox
+          *ngIf="chart.options.includes('rotateXAxisTicks')"
+          label="{{ 'dashboard.rotateXAxisTicks' | translate }}"
+          [(ngModel)]="model.rotateXAxisTicks"
+          name="rotateXAxisTicks"
+        >
+        </narik-checkbox>
+        <narik-checkbox
+          *ngIf="chart.options.includes('gradient')"
+          label="{{ 'dashboard.gradient' | translate }}"
+          [(ngModel)]="model.gradient"
+          name="gradient"
+        >
+        </narik-checkbox>
+        <narik-checkbox
+          *ngIf="chart.options.includes('noBarWhenZero')"
+          label="{{ 'dashboard.noBarWhenZero' | translate }}"
+          [(ngModel)]="model.noBarWhenZero"
+          name="noBarWhenZero"
+        >
+        </narik-checkbox>
+        <narik-checkbox
+          *ngIf="chart.options.includes('showDataLabel')"
+          label="{{ 'dashboard.showDataLabel' | translate }}"
+          [(ngModel)]="model.showDataLabel"
+          name="showDataLabel"
+        >
+        </narik-checkbox>
+        <narik-checkbox
+          *ngIf="chart.options.includes('roundEdges')"
+          label="{{ 'dashboard.roundEdges' | translate }}"
+          [(ngModel)]="model.roundEdges"
+          name="roundEdges"
+        >
+        </narik-checkbox>
+        <narik-checkbox
+          *ngIf="chart.options.includes('tooltipDisabled')"
+          label="{{ 'dashboard.tooltipDisabled' | translate }}"
+          [(ngModel)]="model.tooltipDisabled"
+          name="tooltipDisabled"
+        >
+        </narik-checkbox>
+        <narik-checkbox
+          *ngIf="chart.options.includes('showLegend')"
+          label="{{ 'dashboard.showLegend' | translate }}"
+          [(ngModel)]="model.showLegend"
+          name="showLegend"
+        >
+        </narik-checkbox>
+        <narik-checkbox
+          *ngIf="chart.options.includes('showText')"
+          label="{{ 'dashboard.showText' | translate }}"
+          [(ngModel)]="model.showText"
+          name="showText"
+        >
+        </narik-checkbox>
+        <narik-checkbox
+          *ngIf="chart.options.includes('showXAxisLabel')"
+          label="{{ 'dashboard.showXAxisLabel' | translate }}"
+          [(ngModel)]="model.showXAxisLabel"
+          name="showXAxisLabel"
+        >
+        </narik-checkbox>
+        <narik-checkbox
+          *ngIf="chart.options.includes('showYAxisLabel')"
+          label="{{ 'dashboard.showYAxisLabel' | translate }}"
+          [(ngModel)]="model.showYAxisLabel"
+          name="showYAxisLabel"
+        >
+        </narik-checkbox>
+        <narik-checkbox
+          *ngIf="chart.options.includes('showLabels')"
+          label="{{ 'dashboard.showLabels' | translate }}"
+          [(ngModel)]="model.showLabels"
+          name="showLabels"
+        >
+        </narik-checkbox>
+        <narik-checkbox
+          *ngIf="chart.options.includes('trimXAxisTicks')"
+          label="{{ 'dashboard.trimXAxisTicks' | translate }}"
+          [(ngModel)]="model.trimXAxisTicks"
+          name="trimXAxisTicks"
+        >
+        </narik-checkbox>
+        <narik-checkbox
+          *ngIf="chart.options.includes('trimYAxisTicks')"
+          label="{{ 'dashboard.trimYAxisTicks' | translate }}"
+          [(ngModel)]="model.trimYAxisTicks"
+          name="trimYAxisTicks"
+        >
+        </narik-checkbox>
+        <narik-checkbox
+          *ngIf="chart.options.includes('doughnut')"
+          label="{{ 'dashboard.doughnut' | translate }}"
+          [(ngModel)]="model.doughnut"
+          name="doughnut"
+        >
+        </narik-checkbox>
+        <narik-checkbox
+          *ngIf="chart.options.includes('explodeSlices') && !model.doughnut"
+          label="{{ 'dashboard.explodeSlices' | translate }}"
+          [(ngModel)]="model.explodeSlices"
+          name="explodeSlices"
+        >
+        </narik-checkbox>
+        <narik-checkbox
+          *ngIf="chart.options.includes('autoScale') && !model.doughnut"
+          label="{{ 'dashboard.autoScale' | translate }}"
+          [(ngModel)]="model.autoScale"
+          name="autoScale"
+        >
+        </narik-checkbox>
+        <narik-checkbox
+          *ngIf="chart.options.includes('timeline')"
+          label="{{ 'dashboard.timeline' | translate }}"
+          [(ngModel)]="model.timeline"
+          name="timeline"
+        >
+        </narik-checkbox>
+        <narik-checkbox
+          *ngIf="chart.options.includes('showAxis')"
+          label="{{ 'dashboard.showAxis' | translate }}"
+          [(ngModel)]="model.gaugeShowAxis"
+          name="showAxis"
+        >
+        </narik-checkbox>
+
+        <narik-checkbox
+          *ngIf="chart.options.includes('margin')"
+          label="{{ 'dashboard.margin' | translate }}"
+          [(ngModel)]="model.margin"
+          name="margin"
+        >
+        </narik-checkbox>
+
+        <narik-input
+          type="number"
+          *ngIf="chart.options.includes('margin') && model.margin"
+          label="{{ 'dashboard.marginTop' | translate }}"
+          [(ngModel)]="model.marginTop"
+          name="marginTop"
+        >
+        </narik-input>
+        <narik-input
+          type="number"
+          *ngIf="chart.options.includes('margin') && model.margin"
+          label="{{ 'dashboard.marginRight' | translate }}"
+          [(ngModel)]="model.marginRight"
+          name="marginRight"
+        >
+        </narik-input>
+        <narik-input
+          type="number"
+          *ngIf="chart.options.includes('margin') && model.margin"
+          label="{{ 'dashboard.marginBottom' | translate }}"
+          [(ngModel)]="model.marginBottom"
+          name="marginBottom"
+        >
+        </narik-input>
+        <narik-input
+          type="number"
+          *ngIf="chart.options.includes('margin') && model.margin"
+          label="{{ 'dashboard.marginLeft' | translate }}"
+          [(ngModel)]="model.marginLeft"
+          name="marginLeft"
+        >
+        </narik-input>
+      </div>
+    </mat-tab>
+
+    <mat-tab label="Options">
+      <div class="p-2 flex-container">
+        <narik-input
+          type="number"
+          label="{{ 'dashboard.width' | translate }}"
+          [(ngModel)]="model.width"
+          name="width"
+        >
+        </narik-input>
+
+        <narik-input
+          type="number"
+          label="{{ 'dashboard.height' | translate }}"
+          [(ngModel)]="model.height"
+          name="height"
+        >
+        </narik-input>
+
+        <narik-input
+          type="number"
+          label="{{ 'dashboard.containerHeight' | translate }}"
+          [(ngModel)]="model.containerHeight"
+          name="containerHeight"
+        >
+        </narik-input>
+
+        <narik-input
+          *ngIf="chart.options.includes('legendTitle')"
+          label="{{ 'dashboard.legendTitle' | translate }}"
+          [(ngModel)]="model.legendTitle"
+          name="legendTitle"
+        >
+        </narik-input>
+
+        <narik-select
+          *ngIf="chart.options.includes('legendPosition')"
+          [options]="selectOptions"
+          [dataSource]="legendPositions"
+          label="{{ 'dashboard.legendPosition' | translate }}"
+          [(ngModel)]="model.legendPosition"
+          name="legendPosition"
+          [required]="true"
+        >
+        </narik-select>
+
+        <narik-select
+          *ngIf="chart.options.includes('curve')"
+          [options]="selectOptions"
+          [dataSource]="curves"
+          label="{{ 'dashboard.curve' | translate }}"
+          [(ngModel)]="model.curve"
+          name="curve"
+          [required]="true"
+        >
+        </narik-select>
+
+        <narik-select
+          *ngIf="chart.options.includes('curveClosed')"
+          [options]="selectOptions"
+          [dataSource]="closedCurves"
+          label="{{ 'dashboard.closedCurve' | translate }}"
+          [(ngModel)]="model.closedCurve"
+          name="closedCurve"
+          [required]="true"
+        >
+        </narik-select>
+
+        <narik-input
+          *ngIf="chart.options.includes('showXAxisLabel')"
+          label="{{ 'dashboard.xAxisLabel' | translate }}"
+          [(ngModel)]="model.xAxisLabel"
+          name="xAxisLabel"
+        >
+        </narik-input>
+
+        <narik-input
+          *ngIf="chart.options.includes('yAxisLabel')"
+          label="{{ 'dashboard.yAxisLabel' | translate }}"
+          [(ngModel)]="model.yAxisLabel"
+          name="yAxisLabel"
+        >
+        </narik-input>
+
+        <narik-input
+          type="number"
+          *ngIf="chart.options.includes('barPadding')"
+          label="{{ 'dashboard.barPadding' | translate }}"
+          [(ngModel)]="model.barPadding"
+          name="barPadding"
+        >
+        </narik-input>
+
+        <narik-input
+          type="number"
+          *ngIf="chart.options.includes('arcWidth') && model.doughnut"
+          label="{{ 'dashboard.arcWidth' | translate }}"
+          [(ngModel)]="model.arcWidth"
+          name="arcWidth"
+        >
+        </narik-input>
+
+        <narik-input
+          type="number"
+          *ngIf="chart.options.includes('min')"
+          label="{{ 'dashboard.gaugeMin' | translate }}"
+          [(ngModel)]="model.gaugeMin"
+          name="gaugeMin"
+        >
+        </narik-input>
+        <narik-input
+          type="number"
+          *ngIf="chart.options.includes('max')"
+          label="{{ 'dashboard.gaugeMax' | translate }}"
+          [(ngModel)]="model.gaugeMax"
+          name="gaugeMax"
+        >
+        </narik-input>
+        <narik-input
+          *ngIf="chart.options.includes('innerPadding')"
+          label="{{ 'dashboard.innerPadding' | translate }}"
+          [(ngModel)]="model.innerPadding"
+          name="innerPadding"
+        >
+        </narik-input>
+        <narik-input
+          min="0"
+          step="1"
+          type="number"
+          *ngIf="chart.options.includes('groupPadding')"
+          label="{{ 'dashboard.groupPadding' | translate }}"
+          [(ngModel)]="model.groupPadding"
+          name="groupPadding"
+        >
+        </narik-input>
+
+        <narik-input
+          type="number"
+          *ngIf="chart.options.includes('value')"
+          label="{{ 'dashboard.value' | translate }}"
+          [(ngModel)]="model.gaugeValue"
+          name="value"
+        >
+        </narik-input>
+        <narik-input
+          type="number"
+          *ngIf="chart.options.includes('previousValue')"
+          label="{{ 'dashboard.previousValue' | translate }}"
+          [(ngModel)]="model.gaugePreviousValue"
+          name="previousValue"
+        >
+        </narik-input>
+        <narik-input
+          type="number"
+          *ngIf="chart.options.includes('angleSpan')"
+          label="{{ 'dashboard.angleSpan' | translate }}"
+          [(ngModel)]="model.gaugeAngleSpan"
+          name="angleSpan"
+        >
+        </narik-input>
+        <narik-input
+          type="number"
+          *ngIf="chart.options.includes('startAngle')"
+          label="{{ 'dashboard.startAngle' | translate }}"
+          [(ngModel)]="model.gaugeStartAngle"
+          name="startAngle"
+        >
+        </narik-input>
+        <narik-input
+          type="number"
+          *ngIf="chart.options.includes('largeSegments')"
+          label="{{ 'dashboard.largeSegments' | translate }}"
+          [(ngModel)]="model.gaugeLargeSegments"
+          name="largeSegments"
+        >
+        </narik-input>
+
+        <narik-input
+          type="number"
+          *ngIf="chart.options.includes('smallSegments')"
+          label="{{ 'dashboard.smallSegments' | translate }}"
+          [(ngModel)]="model.gaugeSmallSegments"
+          name="smallSegments"
+        >
+        </narik-input>
+        <narik-input
+          *ngIf="chart.options.includes('units')"
+          label="{{ 'dashboard.units' | translate }}"
+          [(ngModel)]="model.gaugeUnits"
+          name="units"
+        >
+        </narik-input>
+
+        <narik-input
+          type="number"
+          *ngIf="chart.options.includes('minRadius')"
+          label="{{ 'dashboard.minRadius' | translate }}"
+          [(ngModel)]="model.minRadius"
+          name="minRadius"
+        >
+        </narik-input>
+        <narik-input
+          type="number"
+          *ngIf="chart.options.includes('maxRadius')"
+          label="{{ 'dashboard.maxRadius' | translate }}"
+          [(ngModel)]="model.maxRadius"
+          name="maxRadius"
+        >
+        </narik-input>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</ng-template>

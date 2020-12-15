@@ -1,0 +1,49 @@
+<mat-card style="width: 100%" class="cell-container">
+  <ng-container *ngIf="!cell.widgetInfo">
+    <div class="config-container">
+      <narik-button
+        (nClick)="openSelectWidgetType()"
+        tooltip="dashboard.config"
+        class="config-button"
+        icon="extension"
+        buttonStyle="mat-mini-fab"
+      >
+      </narik-button>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="cell.widgetInfo?.widgetType">
+    <ng-container
+      *narikComponentLoader="
+        cell.widgetInfo.widgetType;
+        bindings: {
+          model: cell.widgetInfo.widgetModel,
+          size: size
+        };
+        bindingSource: this
+      "
+    ></ng-container>
+  </ng-container>
+
+  <div
+    class="cell-toolbar"
+    (mouseenter)="isMouseOver = true"
+    (mouseleave)="isMouseOver = false"
+  >
+    <mat-icon class="cell-menu">horizontal_split</mat-icon>
+    <narik-toolbar
+      [host]="this"
+      itemsStyle="mat-mini-fab"
+      *ngIf="isMouseOver"
+      toolbarKey="dashboard-cell"
+    >
+    </narik-toolbar>
+  </div>
+
+  <input
+    #importFile
+    style="display: none"
+    id="file-upload"
+    type="file"
+    (change)="import($event)"
+  />
+</mat-card>

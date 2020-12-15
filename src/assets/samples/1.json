@@ -1,0 +1,782 @@
+{
+  "rows": [
+    {
+      "cells": [
+        {
+          "size": 12,
+          "widgetInfo": {
+            "widgetTypeKey": "dateTime",
+            "widgetModel": {
+              "format": "dd  MMM yyyy HH:mm:ss",
+              "isActive": true,
+              "uniqueId": "9b5833b2-4af5-0453-bdc7-1f08f559e87c"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cells": [
+        {
+          "size": 3,
+          "widgetInfo": {
+            "widgetTypeKey": "kpi",
+            "widgetModel": {
+              "isActive": true,
+              "uniqueId": "7409f793-e84e-5e86-2e60-997fe890ff69",
+              "title": "Total Sales",
+              "dataSource": "kpi1"
+            }
+          }
+        },
+        {
+          "size": 3,
+          "widgetInfo": {
+            "widgetTypeKey": "kpi",
+            "widgetModel": {
+              "isActive": true,
+              "uniqueId": "7409f793-e84e-5e86-2e60-997fe890ff69",
+              "title": "Revenue",
+              "dataSource": "kpi2"
+            }
+          }
+        },
+        {
+          "size": 3,
+          "widgetInfo": {
+            "widgetTypeKey": "kpi",
+            "widgetModel": {
+              "isActive": true,
+              "uniqueId": "7409f793-e84e-5e86-2e60-997fe890ff69",
+              "title": "New User",
+              "dataSource": "kpi3"
+            }
+          }
+        },
+        {
+          "size": 3,
+          "widgetInfo": {
+            "widgetTypeKey": "kpi",
+            "widgetModel": {
+              "isActive": true,
+              "uniqueId": "7409f793-e84e-5e86-2e60-997fe890ff69",
+              "title": "Traffic",
+              "dataSource": "kpi4"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cells": [
+        {
+          "size": 12,
+          "widgetInfo": {
+            "widgetTypeKey": "chart",
+            "widgetModel": {
+              "chartType": "line-chart",
+              "schemeType": "ordinal",
+              "colorScheme": "cool",
+              "animations": true,
+              "showXAxis": true,
+              "showYAxis": true,
+              "showGridLines": true,
+              "rotateXAxisTicks": true,
+              "noBarWhenZero": true,
+              "roundEdges": true,
+              "showXAxisLabel": true,
+              "showYAxisLabel": true,
+              "barPadding": 5,
+              "legendPosition": "right",
+              "isActive": true,
+              "uniqueId": "8a5a49ce-dce9-ea8c-8339-aa7ae3d7322e",
+              "dataSource": "chart-multi",
+              "theme": "light",
+              "height": "",
+              "containerHeight": "500",
+              "gradient": true,
+              "showLegend": true,
+              "trimYAxisTicks": false,
+              "showRefLabels": true,
+              "showRefLines": true,
+              "autoScale": true,
+              "timeline": true,
+              "curve": "Bundle"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cells": [
+        {
+          "size": 12,
+          "widgetInfo": {
+            "widgetTypeKey": "chart",
+            "widgetModel": {
+              "chartType": "bar-vertical",
+              "schemeType": "ordinal",
+              "colorScheme": "cool",
+              "animations": true,
+              "showXAxis": true,
+              "showYAxis": true,
+              "showGridLines": true,
+              "rotateXAxisTicks": true,
+              "noBarWhenZero": true,
+              "roundEdges": true,
+              "showXAxisLabel": true,
+              "showYAxisLabel": true,
+              "barPadding": 5,
+              "legendPosition": "right",
+              "isActive": true,
+              "uniqueId": "5a2f3a45-c72d-0d31-1545-7c58d88c3a66",
+              "dataSource": "chart-single",
+              "theme": "light",
+              "height": "",
+              "showDataLabel": true,
+              "showLegend": true,
+              "containerHeight": "500"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cells": [
+        {
+          "size": 6,
+          "widgetInfo": {
+            "widgetTypeKey": "link",
+            "widgetModel": {
+              "links": [
+                { "link": "/branch", "linkTitle": "Branch" },
+                { "link": "/branch-list", "linkTitle": "List Branch" },
+                { "link": "http://www.google.com", "linkTitle": "Google" }
+              ],
+              "uniqueId": "10b48ef2-88b2-6a99-eaf8-ed294e2e8af9",
+              "title": "Important links",
+              "isActive": true
+            }
+          }
+        },
+        {
+          "size": 6,
+          "widgetInfo": {
+            "widgetTypeKey": "todo",
+            "widgetModel": {
+              "items": [],
+              "uniqueId": "ba898247-dfc4-4aac-ae3c-d5b73cdbc11d",
+              "title": "My Todo list",
+              "isActive": true,
+              "dataSource": "todo"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cells": [
+        {
+          "size": 6,
+          "widgetInfo": {
+            "widgetTypeKey": "chart",
+            "widgetModel": {
+              "chartType": "bubble-chart",
+              "schemeType": "ordinal",
+              "colorScheme": "cool",
+              "animations": true,
+              "showXAxis": true,
+              "showYAxis": true,
+              "showGridLines": true,
+              "rotateXAxisTicks": true,
+              "noBarWhenZero": true,
+              "roundEdges": true,
+              "showXAxisLabel": true,
+              "showYAxisLabel": true,
+              "barPadding": 5,
+              "legendPosition": "right",
+              "isActive": true,
+              "uniqueId": "1380aea5-b059-a679-e21a-fac6e04a985b",
+              "dataSource": "chart-bubble",
+              "theme": "light",
+              "containerHeight": "500",
+              "showLegend": true,
+              "legendTitle": "asdasd",
+              "xAxisLabel": "",
+              "yAxisLabel": "",
+              "autoScale": true,
+              "minRadius": "3",
+              "maxRadius": "50"
+            }
+          }
+        },
+        {
+          "size": 6,
+          "widgetInfo": {
+            "widgetTypeKey": "chart",
+            "widgetModel": {
+              "uniqueId": "6e3c710a-8744-0a8c-b505-5614d5054b12",
+              "title": "Pie Grid",
+              "chartType": "pie-grid",
+              "width": "",
+              "height": "",
+              "colorScheme": "ocean",
+              "schemeType": "ordinal",
+              "dataSource": "chart-single",
+              "animations": true,
+              "gradient": true,
+              "showLabels": true,
+              "doughnut": false,
+              "theme": "light",
+              "showLegend": true,
+              "legendTitle": "",
+              "legendPosition": "right",
+              "isActive": true,
+              "arcWidth": "0.4",
+              "containerHeight": "500"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cells": [
+        {
+          "size": 6,
+          "widgetInfo": {
+            "widgetTypeKey": "chart",
+            "widgetModel": {
+              "chartType": "gauge",
+              "schemeType": "ordinal",
+              "colorScheme": "cool",
+              "animations": true,
+              "showXAxis": true,
+              "showYAxis": true,
+              "showGridLines": true,
+              "rotateXAxisTicks": true,
+              "noBarWhenZero": true,
+              "roundEdges": true,
+              "showXAxisLabel": true,
+              "showYAxisLabel": true,
+              "barPadding": 5,
+              "legendPosition": "right",
+              "isActive": true,
+              "uniqueId": "7f5a9ae8-8a0e-5453-7237-d86053875d10",
+              "dataSource": "chart-single",
+              "theme": "light",
+              "height": "",
+              "showLegend": true,
+              "legendTitle": "",
+              "showText": true,
+              "margin": false,
+              "gaugeMin": "0",
+              "gaugeMax": "100",
+              "gaugeAngleSpan": "240",
+              "gaugeStartAngle": "-120",
+              "gaugeShowAxis": true,
+              "gaugeLargeSegments": "10",
+              "gaugeSmallSegments": "5",
+              "title": "Gauge",
+              "containerHeight": "500"
+            }
+          }
+        },
+        {
+          "size": 6,
+          "widgetInfo": {
+            "widgetTypeKey": "chart",
+            "widgetModel": {
+              "uniqueId": "6e3c710a-8744-0a8c-b505-5614d5054b12",
+              "title": "Pie",
+              "chartType": "pie-chart",
+              "width": "",
+              "height": "",
+              "colorScheme": "ocean",
+              "schemeType": "ordinal",
+              "dataSource": "chart-single",
+              "animations": true,
+              "gradient": true,
+              "showLabels": true,
+              "doughnut": false,
+              "theme": "light",
+              "showLegend": true,
+              "legendTitle": "",
+              "legendPosition": "right",
+              "isActive": true,
+              "arcWidth": "0.4",
+              "containerHeight": "500"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cells": [
+        {
+          "size": 6,
+          "widgetInfo": {
+            "widgetTypeKey": "chart",
+            "widgetModel": {
+              "chartType": "area-chart-stacked",
+              "schemeType": "ordinal",
+              "colorScheme": "picnic",
+              "animations": true,
+              "showXAxis": true,
+              "showYAxis": true,
+              "showGridLines": true,
+              "rotateXAxisTicks": true,
+              "noBarWhenZero": true,
+              "roundEdges": true,
+              "showXAxisLabel": true,
+              "showYAxisLabel": true,
+              "barPadding": 5,
+              "legendPosition": "right",
+              "isActive": true,
+              "uniqueId": "8a5a49ce-dce9-ea8c-8339-aa7ae3d7322e",
+              "dataSource": "chart-multi",
+              "theme": "light",
+              "height": "",
+              "containerHeight": "500",
+              "gradient": true,
+              "showLegend": true,
+              "trimYAxisTicks": false,
+              "showRefLabels": true,
+              "showRefLines": true,
+              "autoScale": true,
+              "timeline": true,
+              "curve": "Bundle",
+              "title": "Stacked Area Chart"
+            }
+          }
+        },
+        {
+          "size": 6,
+          "widgetInfo": {
+            "widgetTypeKey": "chart",
+            "widgetModel": {
+              "chartType": "area-chart",
+              "schemeType": "ordinal",
+              "colorScheme": "picnic",
+              "animations": true,
+              "showXAxis": true,
+              "showYAxis": true,
+              "showGridLines": true,
+              "rotateXAxisTicks": true,
+              "noBarWhenZero": true,
+              "roundEdges": true,
+              "showXAxisLabel": true,
+              "showYAxisLabel": true,
+              "barPadding": 5,
+              "legendPosition": "right",
+              "isActive": true,
+              "uniqueId": "8a5a49ce-dce9-ea8c-8339-aa7ae3d7322e",
+              "dataSource": "chart-multi",
+              "theme": "light",
+              "height": "",
+              "containerHeight": "500",
+              "gradient": true,
+              "showLegend": true,
+              "trimYAxisTicks": false,
+              "showRefLabels": true,
+              "showRefLines": true,
+              "autoScale": true,
+              "timeline": true,
+              "curve": "Bundle",
+              "title": "Area Chart"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cells": [
+        {
+          "size": 6,
+          "widgetInfo": {
+            "widgetTypeKey": "chart",
+            "widgetModel": {
+              "chartType": "bar-vertical-2d",
+              "schemeType": "ordinal",
+              "colorScheme": "cool",
+              "animations": true,
+              "showXAxis": true,
+              "showYAxis": true,
+              "showGridLines": true,
+              "rotateXAxisTicks": true,
+              "noBarWhenZero": true,
+              "roundEdges": true,
+              "showXAxisLabel": true,
+              "showYAxisLabel": true,
+              "barPadding": 5,
+              "legendPosition": "right",
+              "isActive": true,
+              "uniqueId": "5a2f3a45-c72d-0d31-1545-7c58d88c3a66",
+              "dataSource": "chart-multi",
+              "theme": "light",
+              "height": "",
+              "showDataLabel": true,
+              "showLegend": true,
+              "containerHeight": "500",
+              "title": "Grouped Vertical Bar Chart",
+              "groupPadding": "15"
+            }
+          }
+        },
+        {
+          "size": 6,
+          "widgetInfo": {
+            "widgetTypeKey": "chart",
+            "widgetModel": {
+              "chartType": "bar-horizontal-2d",
+              "schemeType": "ordinal",
+              "colorScheme": "cool",
+              "animations": true,
+              "showXAxis": true,
+              "showYAxis": true,
+              "showGridLines": true,
+              "rotateXAxisTicks": true,
+              "noBarWhenZero": true,
+              "roundEdges": true,
+              "showXAxisLabel": true,
+              "showYAxisLabel": true,
+              "barPadding": 5,
+              "legendPosition": "right",
+              "isActive": true,
+              "uniqueId": "5a2f3a45-c72d-0d31-1545-7c58d88c3a66",
+              "dataSource": "chart-multi",
+              "theme": "light",
+              "height": "",
+              "showDataLabel": true,
+              "showLegend": true,
+              "containerHeight": "500",
+              "title": "Grouped Horizontal Bar Chart",
+              "groupPadding": "25",
+              "legendTitle": "Year"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cells": [
+        {
+          "size": 6,
+          "widgetInfo": {
+            "widgetTypeKey": "chart",
+            "widgetModel": {
+              "chartType": "polar-chart",
+              "schemeType": "ordinal",
+              "colorScheme": "cool",
+              "animations": true,
+              "showXAxis": true,
+              "showYAxis": true,
+              "showGridLines": true,
+              "rotateXAxisTicks": true,
+              "noBarWhenZero": true,
+              "roundEdges": true,
+              "showXAxisLabel": true,
+              "showYAxisLabel": true,
+              "barPadding": 5,
+              "legendPosition": "right",
+              "isActive": true,
+              "uniqueId": "8a5a49ce-dce9-ea8c-8339-aa7ae3d7322e",
+              "dataSource": "chart-multi",
+              "theme": "light",
+              "height": "",
+              "containerHeight": "500",
+              "gradient": true,
+              "showLegend": true,
+              "trimYAxisTicks": false,
+              "showRefLabels": true,
+              "showRefLines": true,
+              "autoScale": true,
+              "timeline": true,
+              "curve": "Bundle",
+              "title": "Polar Chart"
+            }
+          }
+        },
+        {
+          "size": 6,
+          "widgetInfo": {
+            "widgetTypeKey": "chart",
+            "widgetModel": {
+              "uniqueId": "6e3c710a-8744-0a8c-b505-5614d5054b12",
+              "title": "Advanced Pie Chart",
+              "chartType": "advanced-pie-chart",
+              "width": "",
+              "height": "",
+              "colorScheme": "ocean",
+              "schemeType": "ordinal",
+              "dataSource": "chart-single",
+              "animations": true,
+              "gradient": true,
+              "showLabels": true,
+              "doughnut": false,
+              "theme": "light",
+              "showLegend": true,
+              "legendTitle": "",
+              "legendPosition": "right",
+              "isActive": true,
+              "arcWidth": "0.4",
+              "containerHeight": "500"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cells": [
+        {
+          "size": 6,
+          "widgetInfo": {
+            "widgetTypeKey": "chart",
+            "widgetModel": {
+              "chartType": "heat-map",
+              "schemeType": "ordinal",
+              "colorScheme": "picnic",
+              "animations": true,
+              "showXAxis": true,
+              "showYAxis": true,
+              "showGridLines": true,
+              "rotateXAxisTicks": true,
+              "noBarWhenZero": true,
+              "roundEdges": true,
+              "showXAxisLabel": true,
+              "showYAxisLabel": true,
+              "barPadding": 5,
+              "legendPosition": "right",
+              "isActive": true,
+              "uniqueId": "1380aea5-b059-a679-e21a-fac6e04a985b",
+              "dataSource": "chart-multi",
+              "theme": "light",
+              "containerHeight": "500",
+              "showLegend": true,
+              "legendTitle": "asdasd",
+              "xAxisLabel": "",
+              "yAxisLabel": "",
+              "autoScale": true,
+              "minRadius": "3",
+              "maxRadius": "50",
+              "title": "Heat Map",
+              "gaugeMin": "0",
+              "gaugeMax": "100",
+              "innerPadding": "10%"
+            }
+          }
+        },
+        {
+          "size": 6,
+          "widgetInfo": {
+            "widgetTypeKey": "chart",
+            "widgetModel": {
+              "chartType": "tree-map",
+              "schemeType": "ordinal",
+              "colorScheme": "picnic",
+              "animations": true,
+              "showXAxis": true,
+              "showYAxis": true,
+              "showGridLines": true,
+              "rotateXAxisTicks": true,
+              "noBarWhenZero": true,
+              "roundEdges": true,
+              "showXAxisLabel": true,
+              "showYAxisLabel": true,
+              "barPadding": 5,
+              "legendPosition": "right",
+              "isActive": true,
+              "uniqueId": "1380aea5-b059-a679-e21a-fac6e04a985b",
+              "dataSource": "chart-single",
+              "theme": "light",
+              "containerHeight": "500",
+              "showLegend": true,
+              "legendTitle": "asdasd",
+              "xAxisLabel": "",
+              "yAxisLabel": "",
+              "autoScale": true,
+              "minRadius": "3",
+              "maxRadius": "50",
+              "title": "Tree Map",
+              "gaugeMin": "0",
+              "gaugeMax": "100",
+              "innerPadding": "10%"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cells": [
+        {
+          "size": 6,
+          "widgetInfo": {
+            "widgetTypeKey": "chart",
+            "widgetModel": {
+              "chartType": "number-card",
+              "schemeType": "ordinal",
+              "colorScheme": "picnic",
+              "animations": true,
+              "showXAxis": true,
+              "showYAxis": true,
+              "showGridLines": true,
+              "rotateXAxisTicks": true,
+              "noBarWhenZero": true,
+              "roundEdges": true,
+              "showXAxisLabel": true,
+              "showYAxisLabel": true,
+              "barPadding": 5,
+              "legendPosition": "right",
+              "isActive": true,
+              "uniqueId": "1380aea5-b059-a679-e21a-fac6e04a985b",
+              "dataSource": "chart-single",
+              "theme": "light",
+              "containerHeight": "500",
+              "showLegend": true,
+              "legendTitle": "asdasd",
+              "xAxisLabel": "",
+              "yAxisLabel": "",
+              "autoScale": true,
+              "minRadius": "3",
+              "maxRadius": "50",
+              "title": "Number Cards",
+              "gaugeMin": "0",
+              "gaugeMax": "100",
+              "innerPadding": "10%"
+            }
+          }
+        },
+        {
+          "size": 6,
+          "widgetInfo": {
+            "widgetTypeKey": "chart",
+            "widgetModel": {
+              "chartType": "linear-gauge",
+              "schemeType": "ordinal",
+              "colorScheme": "cool",
+              "animations": true,
+              "showXAxis": true,
+              "showYAxis": true,
+              "showGridLines": true,
+              "rotateXAxisTicks": true,
+              "noBarWhenZero": true,
+              "roundEdges": true,
+              "showXAxisLabel": true,
+              "showYAxisLabel": true,
+              "barPadding": 5,
+              "legendPosition": "right",
+              "isActive": true,
+              "uniqueId": "7f5a9ae8-8a0e-5453-7237-d86053875d10",
+              "dataSource": "chart-single",
+              "theme": "light",
+              "height": "",
+              "showLegend": true,
+              "legendTitle": "",
+              "showText": true,
+              "margin": false,
+              "gaugeMin": "0",
+              "gaugeMax": "100",
+              "gaugeAngleSpan": "240",
+              "gaugeStartAngle": "-120",
+              "gaugeShowAxis": true,
+              "gaugeLargeSegments": "10",
+              "gaugeSmallSegments": "5",
+              "title": "Linear Gauge",
+              "containerHeight": "500",
+              "gaugeUnits": "alerts",
+              "gaugeValue": "50",
+              "gaugePreviousValue": "70"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cells": [
+        {
+          "size": 6,
+          "widgetInfo": {
+            "widgetTypeKey": "chart",
+            "widgetModel": {
+              "chartType": "bar-vertical-normalized",
+              "schemeType": "ordinal",
+              "colorScheme": "horizon",
+              "animations": true,
+              "showXAxis": true,
+              "showYAxis": true,
+              "showGridLines": true,
+              "rotateXAxisTicks": true,
+              "noBarWhenZero": true,
+              "roundEdges": true,
+              "showXAxisLabel": true,
+              "showYAxisLabel": true,
+              "barPadding": 5,
+              "legendPosition": "right",
+              "isActive": true,
+              "uniqueId": "5a2f3a45-c72d-0d31-1545-7c58d88c3a66",
+              "dataSource": "chart-multi",
+              "theme": "light",
+              "height": "",
+              "showDataLabel": true,
+              "showLegend": true,
+              "containerHeight": "500",
+              "title": "Normalized Vertical Bar Chart",
+              "groupPadding": "25",
+              "legendTitle": "Year"
+            }
+          }
+        },
+        {
+          "size": 6,
+          "widgetInfo": {
+            "widgetTypeKey": "chart",
+            "widgetModel": {
+              "chartType": "bar-horizontal-normalized",
+              "schemeType": "ordinal",
+              "colorScheme": "horizon",
+              "animations": true,
+              "showXAxis": true,
+              "showYAxis": true,
+              "showGridLines": true,
+              "rotateXAxisTicks": true,
+              "noBarWhenZero": true,
+              "roundEdges": true,
+              "showXAxisLabel": true,
+              "showYAxisLabel": true,
+              "barPadding": 5,
+              "legendPosition": "right",
+              "isActive": true,
+              "uniqueId": "5a2f3a45-c72d-0d31-1545-7c58d88c3a66",
+              "dataSource": "chart-multi",
+              "theme": "light",
+              "height": "",
+              "showDataLabel": true,
+              "showLegend": true,
+              "containerHeight": "500",
+              "title": "Normalized Horizontal Bar Chart",
+              "groupPadding": "25",
+              "legendTitle": "Year"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cells": [
+        {
+          "size": 12,
+          "widgetInfo": {
+            "widgetTypeKey": "dataTable",
+            "widgetModel": {
+              "isActive": true,
+              "uniqueId": "d2944bb4-8346-9152-6c08-e99f23b119e0",
+              "title": "Comments",
+              "dataSource": "data-table",
+              "containerHeight": "450",
+              "pageSize": "15"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

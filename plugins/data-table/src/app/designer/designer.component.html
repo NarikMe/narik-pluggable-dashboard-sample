@@ -1,0 +1,32 @@
+<!-- #layout:'WidgetDesignUi' -->
+<ng-template #title>
+  {{ 'dashboard.titles.dataTable' | translate }}
+</ng-template>
+
+<ng-template #content>
+  <narik-select
+    [options]="selectOptions"
+    [dataSource]="dataSources"
+    label="{{ 'dashboard.dataSource' | translate }}"
+    [(ngModel)]="model.dataSource"
+    name="dataSource"
+    [required]="true"
+  >
+  </narik-select>
+
+  <narik-input
+    type="number"
+    label="{{ 'dashboard.containerHeight' | translate }}"
+    [(ngModel)]="model.containerHeight"
+    name="containerHeight"
+  >
+  </narik-input>
+
+  <narik-input
+    type="number"
+    label="{{ 'dashboard.pageSize' | translate }}"
+    [(ngModel)]="model.pageSize"
+    name="pageSize"
+  >
+  </narik-input>
+</ng-template>

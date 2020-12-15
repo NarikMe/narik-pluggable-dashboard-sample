@@ -1,0 +1,32 @@
+<!-- #layout:'WidgetViewUi' -->
+<ng-template #title> </ng-template>
+
+<ng-template #content>
+  <mat-card-title
+    style="
+      place-content: center flex-start;
+      align-items: center;
+      flex-direction: row;
+      box-sizing: border-box;
+      display: flex;
+    "
+  >
+    <small class="text-muted">{{ model.title }}</small
+    ><span fxflex="" style="flex: 1 1 0%; box-sizing: border-box"></span>
+    <mat-chip
+      color="{{ kpiInfo.trade >= 0 ? 'primary' : 'warn' }}"
+      role="option"
+      selected="true"
+      class="icon-chip"
+    >
+      <mat-icon>{{
+        kpiInfo.trade >= 0 ? 'trending_up' : 'trending_down'
+      }}</mat-icon
+      >{{ kpiInfo.trade }}%
+    </mat-chip>
+  </mat-card-title>
+  <div>
+    <h4 class="m-0 font-normal">{{ kpiInfo.value | number }}</h4>
+    <small class="text-muted">{{ kpiInfo.periodTitle }}</small>
+  </div>
+</ng-template>

@@ -1,0 +1,9 @@
+<narik-busy-indicator>
+  <narik-toolbar *ngIf="showToolbar" [host]="this" toolbarKey="dashboard-viewer"></narik-toolbar>
+  <div class="container-fluid row-list dashboard-body">
+    <div *ngFor="let row of rows" class="row row-item" [ngClass]="{'selected': row===selectedRow}">
+      <dashboard-view-row [row]="row"></dashboard-view-row>
+    </div>
+  </div>
+</narik-busy-indicator>
+<input #importFile style="display: none" id="file-upload" type="file" (change)="import($event)" />

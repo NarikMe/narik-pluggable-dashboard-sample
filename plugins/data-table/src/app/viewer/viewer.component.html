@@ -1,0 +1,23 @@
+<!-- #layout:'WidgetViewUi' -->
+<ng-template #title>
+  {{ model.title }}
+</ng-template>
+
+<ng-template #content>
+  <div
+    class="p-2"
+    [ngClass]="{
+      'full-screen-table': isFullScreen,
+      'has-paging': !!pagingInfo
+    }"
+    [style.height.px]="model.containerHeight"
+  >
+    <narik-data-table
+      [pagingInfo]="pagingInfo"
+      [selectMode]="'None'"
+      [fields]="fields"
+      [dataSource]="dataSource"
+    >
+    </narik-data-table>
+  </div>
+</ng-template>

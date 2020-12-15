@@ -1,0 +1,34 @@
+.dashboard-body .narik-mat-toolbar{
+  border-bottom: 0px !important;
+  background-color: transparent !important;
+  opacity: 0.8;
+}
+
+.cell-toolbar {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  display: flex;
+  opacity: 0.5;
+}
+
+
+
+[dir='rtl'] .cell-toolbar {
+  left: initial !important;
+  right: 5px;
+}
+
+.row-toolbar {
+  position: absolute;
+  top: -5px;
+  left: 6px;
+  display: flex;
+}
+
+[dir='rtl'] .row-toolbar {
+  left: initial !important;
+  right: 6px;
+}
+
+
