@@ -2,20 +2,20 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 const AngularCompilerPlugin = require('@ngtools/webpack/src');
 const LayoutResolver = require('./layout-resolver');
 
-const mf = require('@angular-architects/module-federation/webpack');
 const path = require('path');
 
 class WebpackConfigHelper {
   static applyLayoutConfig(config, basePath) {
     const index = config.plugins.findIndex((p) => {
-      return p instanceof AngularCompilerPlugin.AngularCompilerPlugin;
+      return p instanceof AngularCompilerPlugin.ivy.AngularWebpackPlugin;
     });
-    const options = config.plugins[index]._options;
+    const options = config.plugins[index].pluginOptions;
     options.directTemplateLoading = false;
     config.plugins.splice(index);
 
-    const plugIn = new AngularCompilerPlugin.AngularCompilerPlugin(options);
-    config.plugins.push(plugIn);
+    config.plugins.push(
+      new AngularCompilerPlugin.ivy.AngularWebpackPlugin(options)
+    );
 
     config.module.rules.unshift({
       test: /\.html?$/,
@@ -25,7 +25,7 @@ class WebpackConfigHelper {
           loader: '@narik/webpack-tools',
           options: {
             resolver: new LayoutResolver(),
-            basePath: config.plugins[index]._basePath + (basePath || ''),
+            basePath: path.dirname(options.tsconfig) + (basePath || ''),
           },
         },
       ],
@@ -40,7 +40,6 @@ class WebpackConfigHelper {
       .join(__dirname, './../dist/dashboard-lib')
       .replace(/\\/g, '/');
 
-    debugger;
     options.shared = options.shared || {
       '@angular/core': {
         singleton: true,
@@ -110,7 +109,6 @@ class WebpackConfigHelper {
       },
     };
 
-    debugger;
     if (options.isHost) {
       for (const key in options.shared) {
         options.shared[key].eager = true;
