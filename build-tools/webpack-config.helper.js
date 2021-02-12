@@ -6,6 +6,7 @@ const path = require('path');
 
 class WebpackConfigHelper {
   static applyLayoutConfig(config, basePath) {
+    
     const index = config.plugins.findIndex((p) => {
       return p instanceof AngularCompilerPlugin.ivy.AngularWebpackPlugin;
     });
