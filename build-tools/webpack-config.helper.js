@@ -6,7 +6,6 @@ const path = require('path');
 
 class WebpackConfigHelper {
   static applyLayoutConfig(config, basePath) {
-    
     const index = config.plugins.findIndex((p) => {
       return p instanceof AngularCompilerPlugin.ivy.AngularWebpackPlugin;
     });
@@ -35,6 +34,7 @@ class WebpackConfigHelper {
 
   static applyFederationConfig(config, options) {
     config.output.uniqueName = options.uniqueName;
+    config.output.publicPath = 'auto';
     config.optimization.runtimeChunk = false;
 
     const dashboardLibPath = path
