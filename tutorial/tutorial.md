@@ -150,7 +150,7 @@ for example:
 ## More Information
 
 Find more information about **Webpack Module Federation** [here](https://webpack.js.org/concepts/module-federation/)   
-This [tutorial](https://github.com/angular-architects/module-federation-plugin/blob/main/packages/mf/tutorial/tutorial.md) was very helpful to me.  
+This [tutorial](https://github.com/angular-architects/module-federation-plugin/blob/main/libs/mf/README.md) was very helpful to me.  
 In this project I used some features of [Narik](http://narik.me)
 
 
