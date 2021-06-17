@@ -8,14 +8,14 @@ class WebpackConfigHelper {
   static applyLayoutConfig(config, basePath) {
     
     const index = config.plugins.findIndex((p) => {
-      return p instanceof AngularCompilerPlugin.ivy.AngularWebpackPlugin;
+      return p instanceof AngularCompilerPlugin.AngularWebpackPlugin;
     });
     const options = config.plugins[index].pluginOptions;
     options.directTemplateLoading = false;
     config.plugins.splice(index);
 
     config.plugins.push(
-      new AngularCompilerPlugin.ivy.AngularWebpackPlugin(options)
+      new AngularCompilerPlugin.AngularWebpackPlugin(options)
     );
 
     config.module.rules.unshift({
@@ -46,52 +46,52 @@ class WebpackConfigHelper {
       '@angular/core': {
         singleton: true,
         strictVersion: false,
-        requiredVersion: '11.0.2',
+        requiredVersion: '12.0.4',
       },
       '@angular/animations': {
         singleton: true,
         strictVersion: false,
-        requiredVersion: '11.0.2',
+        requiredVersion: '12.0.4',
       },
       '@angular/forms': {
         singleton: true,
         strictVersion: false,
-        requiredVersion: '11.0.2',
+        requiredVersion: '12.0.4',
       },
       '@angular/common': {
         singleton: true,
         strictVersion: false,
-        requiredVersion: '11.0.2',
+        requiredVersion: '12.0.4',
       },
       '@angular/cdk': {
         singleton: true,
         strictVersion: false,
-        requiredVersion: '11.0.1',
+        requiredVersion: '12.0.4',
       },
       '@angular/material': {
         singleton: true,
         strictVersion: false,
-        requiredVersion: '11.0.1',
+        requiredVersion: '12.0.4',
       },
       '@narik/infrastructure': {
         singleton: true,
         strictVersion: false,
-        requiredVersion: '5.1.0',
+        requiredVersion: '6.0.1',
       },
       '@narik/core': {
         singleton: true,
         strictVersion: false,
-        requiredVersion: '5.1.0',
+        requiredVersion: '6.0.1',
       },
       '@narik/ui-core': {
         singleton: true,
         strictVersion: false,
-        requiredVersion: '5.1.0',
+        requiredVersion: '6.0.1',
       },
       '@narik/ui-material': {
         singleton: true,
         strictVersion: false,
-        requiredVersion: '5.1.0',
+        requiredVersion: '6.0.1',
       },
       '@ngx-translate/core': {
         singleton: true,
@@ -101,7 +101,7 @@ class WebpackConfigHelper {
       rxjs: {
         singleton: true,
         strictVersion: false,
-        requiredVersion: '6.6.3',
+        requiredVersion: '7.1.0',
       },
       'dashboard-lib': {
         import: dashboardLibPath,
