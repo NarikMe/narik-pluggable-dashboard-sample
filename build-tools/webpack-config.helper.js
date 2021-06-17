@@ -35,6 +35,7 @@ class WebpackConfigHelper {
 
   static applyFederationConfig(config, options) {
     config.output.uniqueName = options.uniqueName;
+    config.output.publicPath = 'auto';
     config.optimization.runtimeChunk = false;
 
     const dashboardLibPath = path
