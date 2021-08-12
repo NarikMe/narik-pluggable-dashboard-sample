@@ -6,7 +6,6 @@ const path = require('path');
 
 class WebpackConfigHelper {
   static applyLayoutConfig(config, basePath) {
-    
     const index = config.plugins.findIndex((p) => {
       return p instanceof AngularCompilerPlugin.AngularWebpackPlugin;
     });
@@ -18,19 +17,24 @@ class WebpackConfigHelper {
       new AngularCompilerPlugin.AngularWebpackPlugin(options)
     );
 
-    config.module.rules.unshift({
-      test: /\.html?$/,
-      use: [
-        'raw-loader',
-        {
-          loader: '@narik/webpack-tools',
-          options: {
-            resolver: new LayoutResolver(),
-            basePath: path.dirname(options.tsconfig) + (basePath || ''),
+    config.module.rules.unshift(
+      {
+        test: /\.html?$/,
+        use: [
+          {
+            loader: '@narik/webpack-tools',
+            options: {
+              resolver: new LayoutResolver(),
+              basePath: path.dirname(options.tsconfig) + (basePath || ''),
+            },
           },
-        },
-      ],
-    });
+        ],
+      },
+      {
+        test: /\.html$/i,
+        type: 'asset/source',
+      }
+    );
   }
 
   static applyFederationConfig(config, options) {
